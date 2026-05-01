@@ -1,11 +1,11 @@
-import sqlite3
-conn = sqlite3.connect("database.sqlite")
-cursor = conn.cursor()
-#cursor.execute("SELECT * FROM users")
-users = cursor.fetchall()  
-from flask import Flask
-app = Flask(__name__)   
+from flask import Flask, send_from_directory
+from pathlib import Path
+
+app = Flask(__name__, static_folder='.')
 
 @app.route('/')
 def home():
-    return "Welcome to the website!"
+    return send_from_directory(Path(__file__).parent, 'index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,12 +1,41 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <title>Code QuickRef | Syntax Lookup</title>
+  <style>
+    :root { --bg: #0f172a; --text: #f8fafc; --accent: #38bdf8; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+    .search-container { max-width: 600px; margin: 40px auto; text-align: center; }
+    input[type="search"] { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #334155; background: #1e293b; color: white; font-size: 1.1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 600px; margin: 0 auto; }
+    .card { background: #1e293b; padding: 20px; border-radius: 8px; text-align: center; cursor: pointer; border: 1px solid transparent; }
+    .card:hover { border-color: var(--accent); }
+  </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is my first coded website.</p>
+
+  <div class="search-container">
+    <h1>Find Your Syntax</h1>
+    <input type="search" id="searchBar" placeholder="Search for commands (e.g., print, list, import)...">
+  </div>
+
+  <div class="grid">
+    <div class="card">Basic (Print)</div>
+    <div class="card">Lists</div>
+    <div class="card">Imports</div>
+    <div class="card">Advanced</div>
+  </div>
+
+  <script>
+    // Register the PWA service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </body>
 </html>
