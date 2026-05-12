@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="/manifest.json">
-  <title>Code QuickRef | Syntax Lookup</title>
-  <style>
-    :root { --bg: #0f172a; --text: #f8fafc; --accent: #38bdf8; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-    .search-container { max-width: 600px; margin: 40px auto; text-align: center; }
-    input[type="search"] { width: 100%; padding: 15px; border-radius: 8px; border: 2px solid #334155; background: #1e293b; color: white; font-size: 1.1rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 600px; margin: 0 auto; }
-    .card { background: #1e293b; padding: 20px; border-radius: 8px; text-align: center; cursor: pointer; border: 1px solid transparent; }
-    .card:hover { border-color: var(--accent); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Beach Day planner </title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <div class="search-container">
-    <h1>Find Your Syntax</h1>
-    <input type="search" id="searchBar" placeholder="Search for commands (e.g., print, list, import)...">
-  </div>
-
-  <div class="grid">
-    <div class="card">Basic (Print)</div>
-    <div class="card">Lists</div>
-    <div class="card">Imports</div>
-    <div class="card">Advanced</div>
-  </div>
-
-  <script>
-    // Register the PWA service worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js');
-      });
-    }
-  </script>
+    <h1> Beach Day planner </h1>
+    <p> Welcome to the beach day planner! This website will help you plan the perfect day at the beach. You can find information about the weather, tides, and what to bring for a fun and safe day at the beach. </p>
+    <h2> Weather Forecast </h2>
+    <p> Check the weather forecast for your beach day to ensure you have the best experience. Make sure to pack sunscreen, a hat, and plenty of water! </p>
+    <h2> Tides Information </h2>
+    <p> Knowing the tides can help you plan your activities at the beach. Check the tide schedule to find out when it's best for swimming, surfing, or exploring tide pools. </p>
+    <h2> What to Bring </h2>
+    <ul>
+        <li>Sunscreen</li>
+        <li>Beach towel</li>
+        <li>Swimsuit</li>
+        <li>Hat and sunglasses</li>
+        <li>Water and snacks</li>
+        <li>Beach umbrella or tent</li>
+        <li>Beach toys and games</li>
+    </ul>
+    <p> Enjoy your day at the beach and stay safe! Remember to clean up after yourself and respect the environment. </p>
 </body>
 </html>
