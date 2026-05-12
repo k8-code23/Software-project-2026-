@@ -1,0 +1,6 @@
+.hero h1 {
+  font-size: 3rem;
+  color: #dbdf92;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  margin-bottom: 0.5rem;
+}
